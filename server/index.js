@@ -22,21 +22,17 @@ mongoose.connect(MONGODB_URL)
 
 const app = express();
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-});
+
 
 
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static("Public"));
+app.use(express.static(path.join(__dirname,"Public")));
 app.use('/images', express.static(path.join(__dirname, '../client/public/images')));
 
 
-// Serve static files from the 'dist' directory
-app.use(express.static(path.join(__dirname, 'dist')));
 
 // Serve index.html for all other routes
 
@@ -46,7 +42,7 @@ const allowedOrigins = [
   'http://localhost:5173'        // Vite development URL
 ];
 
-app.use(
+ app.use(
   cors({
     origin: function (origin, callback) {
       // Debug logging to understand which origin is being rejected
