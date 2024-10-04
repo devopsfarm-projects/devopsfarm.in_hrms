@@ -35,7 +35,7 @@ const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:10000";
   return (
     <div>
       <div className="container" id="container">
-        <div className="form-container ">
+        <div className="bg-none w-80 ">
           <form
             onSubmit={handleSubmit}
             className="flex flex-col items-center justify-center p-5 w-full h-full box-border"

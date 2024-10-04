@@ -42,7 +42,7 @@ function Login() {
   return (
     <div>
       <div className="container" id="container">
-        <div className="form-container ">
+        <div className=" bg-none w-80 ">
           <form
             className="flex flex-col items-center justify-center p-5  w-full  h-full box-border"
             onSubmit={logUser}
