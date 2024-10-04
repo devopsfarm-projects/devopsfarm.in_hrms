@@ -26,7 +26,7 @@ import EventSchedule from './components/Employee/EventSchedule.jsx';
 import AdminRegistration from './components/Pages/AdminRegistration.jsx';
 import EmpEnroll from './components/Admin/Enrollment.jsx';
 import ModuleDashboard from './components/Employee/Module.jsx';
-import Chatteamly from './components/Admin/chat-teamly.jsx';
+// import Chatteamly from './components/Admin/chat-teamly.jsx';
 import { UserProvider } from './UserContext';
 import EmployeeChat from './components/Employee/chat-teamly.jsx';
 import ForgotPassword from './components/Pages/forgot-password.jsx';
@@ -60,7 +60,7 @@ function App() {
             </PrivateRoute>
           }>
             <Route index element={<Home />} />
-            <Route path='chat-teamly/' element={<Chatteamly />} />
+            {/* <Route path='chat-teamly/' element={<Chatteamly />} /> */}
             <Route path='employee' element={<Employee />} />
             <Route path='add_employee/' element={<AddEmployee />} />
             <Route path='edit_employee/:id' element={<EditEmployee />} />
